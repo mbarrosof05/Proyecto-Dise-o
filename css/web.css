@@ -1,0 +1,1605 @@
+    /* 
+    * RESET BÁSICO
+    */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.6;
+        color: #000000;
+        font-size: 12px;
+        font-family: sans-serif;
+        background: #8295c2;
+    }
+
+    #contenido {
+        padding: 60px;
+        background-color: #e9edfb;
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------------------------
+    * ------------------------------------------------------------------HEADER--------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------------------------------------*/
+    .titulo h1, .tituloClown, .indexTitulo, .tituloEducacion {
+        /* Uso de propiedades de textos y sombras en diferentes títulos de la página */
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif; 
+        font-weight:bold; 
+        font-size: 30px; 
+        color: #ffdd00; 
+        text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+    }
+    /*
+    * Continuamos con el menú de inicio. En la página index tiene un tamaño diferente para que conste que no aparece duplicado.
+    * En este usaremos una animación para que los enlaces vayan cambiando de color según el hover.
+    * Usamos pseudoclases como first/last child o nth-child(n elemento hijo).
+    * También hacemos uso de cursores utilizando una imagen.
+    */
+    .menuInicio {
+        padding: 3px;
+    }
+    .menuInicioNav {
+        width: 550px;
+        height: 40px;
+    }
+    .menuInicioNav a {
+        font-size: 14px;
+    }
+    .menuInicioNav :first-child {
+        width: 65px;
+    }
+
+    .menuInicioNav :nth-child(2) {
+        width: 70px;
+    }
+
+    .menuInicioNav :nth-child(3) {
+        width: 80px;
+    }
+
+    .menuInicioNav :nth-child(4) {
+        width: 125px;
+    }
+
+    .menuInicioNav :nth-child(5) {
+        width: 105px;
+    }
+    .menuInicioNav :nth-child(6) {
+        width: 105px;
+    }
+    .menuInicioNav a:first-child:hover~.animation {
+        width: 65px;
+        left: 0;
+        background-color: yellow;
+    }
+
+    .menuInicioNav a:nth-child(2):hover~.animation {
+        width: 70px;
+        left: 65px;
+        background-color: #0800ff;
+    }
+
+    .menuInicioNav a:nth-child(3):hover~.animation {
+        width: 80px;
+        left: 135px;
+        background-color: green;
+    }
+
+    .menuInicioNav a:nth-child(4):hover~.animation {
+        width: 125px;
+        left: 215px;
+        background-color: purple;
+    }
+
+    .menuInicioNav a:nth-child(5):hover~.animation {
+        width: 105px;
+        left: 340px;
+        background-color: #e67e22;
+    }
+    .menuInicioNav a:nth-child(6):hover~.animation {
+        width: 105px;
+        left: 445px;
+        background-color: red;
+    }
+    nav {
+        position: relative;
+        width: 430px;
+        height: 35px;
+        background-color: #a1b3e2;
+        border-radius: 8px;
+        font-size: 0;
+        margin: auto;
+    }
+    nav a {
+        border-radius: 8px;
+        line-height: 40px;
+        height: 100%;
+        font-size: 12px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        cursor: url(../img/narizCursor.png), auto;
+    }
+
+    nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: 8px;
+    }
+
+    a:first-child {
+        width: 50px;
+    }
+
+    a:nth-child(2) {
+        width: 55px;
+    }
+
+    a:nth-child(3) {
+        width: 55px;
+    }
+
+    a:nth-child(4) {
+        width: 110px;
+    }
+
+    a:nth-child(5) {
+        width: 80px;
+    }
+    a:nth-child(6) {
+        width: 80px;
+    }
+
+
+    nav a:first-child:hover~.animation {
+        width: 50px;
+        left: 0;
+        background-color: yellow;
+    }
+
+    nav a:nth-child(2):hover~.animation {
+        width: 55px;
+        left: 50px;
+        background-color: #0800ff;
+    }
+
+    nav a:nth-child(3):hover~.animation {
+        width: 55px;
+        left: 105px;
+        background-color: green;
+    }
+
+    nav a:nth-child(4):hover~.animation {
+        width: 110px;
+        left: 160px;
+        background-color: purple;
+    }
+
+    nav a:nth-child(5):hover~.animation {
+        width: 80px;
+        left: 270px;
+        background-color: #e67e22;
+    }
+    nav a:nth-child(6):hover~.animation {
+        width: 80px;
+        left: 350px;
+        background-color: #ff0000;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #97ade2;
+        margin: auto;
+        padding-bottom: 7px;
+    }
+    .logoIzqda {
+        position: absolute;
+        left: 0;
+        margin-top: 40px;
+        width: 60px;
+        height: 35px;
+    }
+
+    .logoDerecha {
+        position: absolute;
+        float: right;
+        right: 15px;
+        margin-top: -10px;
+    }
+    /**
+    * Adaptamos tamaños y dimensiones de algunos elementos para distintos dispositivos.
+    * También en dispositivos móviles usamos la propiedad position del modelo de cajas estableciéndola en fixed para más comodidad hacia el usuario.
+    */
+    @media only screen and (min-width: 380px) and (max-width: 769px) {
+        header {  
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        .espacio {
+            height: 50px;
+        }
+        .logoIzqda {
+            margin-top: 20px;
+            margin-right: 0px;
+            width: 40px;
+            height: 20px;
+        }
+
+        .logoDerecha {
+            margin-top: -33px;
+            width: 25px;
+            right: 3px;
+        }
+        .indexTitulo h1{
+            font-family: 'Times New Roman', Times, serif; 
+            font-weight:bold; 
+            font-size: 30px; 
+            color: #ffdd00; 
+            text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+        }
+    }
+    @media only screen and (min-width: 769px) and (max-width: 1100px) {
+        .logoIzqda {
+            margin-top: 60px;
+            width: 40px;
+            height: 20px;
+        }
+
+        .logoDerecha {
+            margin-top: 8px;
+            width: 25px;
+            right: 5px;
+        }
+    }
+
+    @media only screen and (min-width: 1100px) {
+        .logoIzqda {
+            width: 80px;
+        }
+
+        .logoDerecha {
+            width: 45px;
+            right: 15px;
+        }
+    }
+
+
+    /*
+    * En lo siguiente adaptaremos el menú con el media queries a los tamaños entre 380 y 580 y posteriormente menos de ello, aunque sea más inusual.
+    * Escogemos hacerlo de esta forma en lugar de con el diseño responsive ya que el menú es algo muy característico de la página y las animaciones
+    * de este dependen de las dimensiones en píxeles de una forma muy concreta.
+    */
+        
+    @media only screen and (min-width: 380px) and (max-width: 580px) {
+        .menuInicioNav {
+            width: 370px;
+            height: 40px;
+        }
+        .menuInicioNav a {font-size: 10px;}
+        .menuInicioNav :nth-child(1) {width: 40px;}
+        .menuInicioNav :nth-child(2) {width: 45px;}
+        .menuInicioNav :nth-child(3) {width: 50px;}
+        .menuInicioNav :nth-child(4) {width: 90px;}
+        .menuInicioNav :nth-child(5) {width: 75px;}
+        .menuInicioNav :nth-child(6) {width: 70px;}
+        .menuInicioNav a:nth-child(1):hover~.animation {
+            width: 40px;
+            left: 0;
+            background-color: yellow;
+        }
+        .menuInicioNav a:nth-child(2):hover~.animation {
+            width: 45px;
+            left: 40px;
+            background-color: #0800ff;
+        }
+        .menuInicioNav a:nth-child(3):hover~.animation {
+            width: 50px;
+            left: 85px;
+            background-color: green;
+        }
+        .menuInicioNav a:nth-child(4):hover~.animation {
+            width: 90px;
+            left: 135px;
+            background-color: purple;
+        }
+        .menuInicioNav a:nth-child(5):hover~.animation {
+            width: 75px;
+            left: 225px;
+            background-color: #e67e22;
+        }
+        .menuInicioNav a:nth-child(6):hover~.animation {
+            width: 70px;
+            left: 300px;
+            background-color: red;
+        }
+        header {  
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        .espacio {height: 50px;}
+        nav {width: 350px;}
+        nav a {font-size: 9px;}
+        a:nth-child(1) {width: 40px;}
+        a:nth-child(2) {width: 45px;}
+        a:nth-child(3) {width: 50px;}
+        a:nth-child(4) {width: 85px;}
+        a:nth-child(5) {width: 65px;}
+        a:nth-child(6) {width: 65px;}
+        nav a:nth-child(1):hover~.animation {
+            width: 40px;
+            left: 0;
+            background-color: yellow;
+        }
+        nav a:nth-child(2):hover~.animation {
+            width: 45px;
+            left: 40px;
+            background-color: #0800ff;
+        }
+        nav a:nth-child(3):hover~.animation {
+            width: 50px;
+            left: 85px;
+            background-color: green;
+        }
+        nav a:nth-child(4):hover~.animation {
+            width: 85px;
+            left: 135px;
+            background-color: purple;
+        }
+        nav a:nth-child(5):hover~.animation {
+            width: 65px;
+            left: 220px;
+            background-color: #e67e22;
+        }
+        nav a:nth-child(6):hover~.animation {
+            width: 65px;
+            left: 285px;
+            background-color: red;
+        }
+    }
+      @media only screen and (max-width: 380px) {
+        header {  
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+        .espacio {
+            height: 50px;
+        }
+        .logoIzqda {
+            display: none;
+        }
+
+        .logoDerecha {
+            display: none;
+        }
+        nav {width: 280px;}
+        nav a {font-size: 8.5px;}
+        a:nth-child(1) {width: 30px;}
+        a:nth-child(2) {width: 35px;}
+        a:nth-child(3) {width: 40px;}
+        a:nth-child(4) {width: 70px;}
+        a:nth-child(5) {width: 55px;}
+        a:nth-child(6) {width: 50px;}
+        nav a:nth-child(1):hover~.animation {
+            width: 30px;
+            left: 0;
+            background-color: yellow;
+        }
+        nav a:nth-child(2):hover~.animation {
+            width: 35px;
+            left: 30px;
+            background-color: #0800ff;
+        }
+        nav a:nth-child(3):hover~.animation {
+            width: 40px;
+            left: 65px;
+            background-color: green;
+        }
+        nav a:nth-child(4):hover~.animation {
+            width: 70px;
+            left: 105px;
+            background-color: purple;
+        }
+        nav a:nth-child(5):hover~.animation {
+            width: 55px;
+            left: 175px;
+            background-color: #e67e22;
+        }
+        nav a:nth-child(6):hover~.animation {
+            width: 50px;
+            left: 230px;
+            background-color: red;
+        }
+        .menuInicioNav {
+            width: 330px;
+            height: 40px;
+        }
+        .menuInicioNav a {font-size: 10px;}
+        .menuInicioNav :nth-child(1) {width: 35px;}
+        .menuInicioNav :nth-child(2) {width: 40px;}
+        .menuInicioNav :nth-child(3) {width: 40px;}
+        .menuInicioNav :nth-child(4) {width: 90px;}
+        .menuInicioNav :nth-child(5) {width: 65px;}
+        .menuInicioNav :nth-child(6) {width: 60px;}
+        .menuInicioNav a:nth-child(1):hover~.animation {
+            width: 35px;
+            left: 0;
+            background-color: yellow;
+        }
+        .menuInicioNav a:nth-child(2):hover~.animation {
+            width: 40px;
+            left: 35px;
+            background-color: #0800ff;
+        }
+        .menuInicioNav a:nth-child(3):hover~.animation {
+            width: 40px;
+            left: 75px;
+            background-color: green;
+        }
+        .menuInicioNav a:nth-child(4):hover~.animation {
+            width: 90px;
+            left: 115px;
+            background-color: purple;
+        }
+        .menuInicioNav a:nth-child(5):hover~.animation {
+            width: 65px;
+            left: 205px;
+            background-color: #e67e22;
+        }
+        .menuInicioNav a:nth-child(6):hover~.animation {
+            width: 60px;
+            left: 270px;
+            background-color: red;
+        }
+    }
+    
+    /*---------------------------------------------------------------------------------------------------------------------------------------
+    *------------------------------------------------------INICIO------------------------------------------------------------------------------
+    ------------------------------------------------------------------------------------------------------------------------------------------*/
+    .indexTitulo {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-top: -30px;
+    }
+    .indexLogos {
+        text-align: center;
+        margin-top: 60px;
+    }
+    .textoInicial {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 1000px;
+        height: 200px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: rgba(83, 76, 76, 0.11);
+        padding: 20px;
+        position: relative;
+        opacity: 1;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.564);
+        overflow: hidden;
+
+    }
+    .banderasInicio {
+        margin-top: 10px;
+    }
+    .textoInicial p {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        max-width: 1000px;
+        color: #292525;
+        position: relative;
+    }
+    .carrousel {
+        width: 92vw;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+    .slides {
+        display: flex;
+        width: 100%;
+        animation: slide-left 100s linear infinite;
+    }
+    .slides img {
+        min-width: 400px;
+        height: 300px;
+        object-fit: cover;
+        animation: slide-left 100s linear infinite;
+    }
+    /**
+    * Adaptamos a los diferentes dispositivos diferentes elementos, sobretodo el tamaño de fuentes del texto y las dimensiones de las diapositivas.
+    */
+    @media only screen and (max-width: 376px) {
+        .textoInicial p {
+            font-size: 10px;
+        }
+        .carrousel {
+            width: 70vw;
+            height: 250px;
+        }
+    }
+    @media only screen and (min-width: 376px) and (max-width: 768px) {
+        .indexTitulo {
+            font-size: 15px;
+        }
+        .textoInicial p {
+            font-size: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-variant: small-caps;
+            max-width: 1000px;
+            max-height: 800px;
+            color: #292525;
+            position: relative;
+        }
+
+        .indexLogos {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logoIzqdaIndex {
+            width: 60px;
+        }
+        .logoDerechaIndex {
+            width: 40px;
+        }
+        .carrousel {
+            width: 75vw;
+            height: 250px;
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            animation: slide-left 30s linear infinite;
+        }
+
+        .slides img {
+            min-width: 250px;
+            height: 250px;
+            animation: slide-left 30s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 420px) and (max-width: 500px) {
+        .textoInicial p {
+            font-size: 11px;
+
+        }
+    }
+    @media only screen and (min-width: 500px) and (max-width: 570px) {
+        .textoInicial p {
+            font-size: 12px;
+
+        }
+    }
+    @media only screen and (min-width: 570px) and (max-width: 640px) {
+        .textoInicial p {
+            font-size: 13px;
+        }
+    }
+    @media only screen and (min-width: 640px) and (max-width: 700px) {
+        .textoInicial p {
+            font-size: 14px;
+        }
+    }
+    @media only screen and (min-width: 700px) and (max-width: 768px) {
+        .textoInicial p {
+            font-size: 15px;
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1400px) {
+        .textoInicial {
+            max-height: 170px;
+        }
+
+        .textoInicial p {
+            font-size: 15.5px;
+            max-width: 1000px;
+            max-height: 400px;
+            color: #292525;
+            position: relative;
+        }
+
+        .indexLogos {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .logoIzqdaIndex {
+            width: 60px;
+        }
+        .logoDerechaIndex {
+            width: 40px;
+        }
+        .carrousel {
+            width: 90vw;
+            height: 250px;
+        }
+        .slides {
+            display: flex;
+            width: 100%;
+            animation: slide-left 60s linear infinite;
+        }
+        .slides img {
+            min-width: 250px;
+            height: 250px;
+            animation: slide-left 60s linear infinite;
+        }
+    }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------
+    * -------------------------------------------------------------ACTRIZ------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------------------------------*/
+    .actriz {
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 1000px;
+        height: 250px;
+        margin: 10px auto;
+    }
+    .actriz p {
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-size: 18px;
+        margin: 0 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .actriz img {
+        width: 300px;
+        height: 220px;
+    }
+    .actriz #img1, .actriz #img2, .actriz #img3 {
+        width: 350px;
+    }
+    .actriz #img5 {
+        width: 550px;
+    }
+    .actriz #img6 {
+        width: 400px;
+    }
+    /*
+    * Adaptamos a los diferentes dispositivos las dimensiones de las imágenes y el tamaño de la fuente en algún caso.
+    */
+    @media only screen and (min-width: 800px) and (max-width: 1400px) {
+        .actriz {
+            max-width: 740px;
+            height: 300px;
+        }
+        .actriz p {
+            font-size: 10px;
+        }
+        .actriz img {
+            margin: 0 5px;
+            width: 300px;
+            height: 200px;
+        }
+        #img4{
+            height: 280px;
+        }
+    }
+    @media only screen and (max-width: 340px) {
+        .actriz {
+            width: 250px;
+            height: 150px;
+        }
+
+        .actriz img {
+            margin: 0 5px;
+            width: 100px;
+            height: 80px;
+        }
+        .actriz p {
+            font-size: 6px;
+        }
+    }
+    @media only screen and (min-width: 340px) and (max-width: 800px) {
+        .actriz {
+            width: 90%; 
+            max-width: 340px;
+            height: auto;
+            flex-direction: column; 
+        }
+        .actriz p {
+            font-size: 11px;
+            margin: 5px 0; 
+        }
+        .actriz img {
+            width: 80%; 
+            max-width: 150px; 
+            height: auto; 
+            margin: 5px 0;
+        }
+    }
+    /**----------------------------------------------------------------------------------------------------------------------------------
+    * -------------------------------------------------------- EDUCACIÓN ----------------------------------------------------------------
+    -------------------------------------------------------------------------------------------------------------------------------------*/
+    .educacion {
+        margin-top: 30px;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .educacion .opciones {
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        height: 400px;
+    }
+    #textoEducacion1{animation: aparecer 2s ease;}
+    #textoEducacion2{animation: aparecer 4s ease;}
+    .educacion .opciones:nth-child(1) {
+        background-image: url(../img/cursos.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .educacion .opciones:nth-child(2) {
+        background-image: url(../img/talleres.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .educacion .opciones .texto {
+        color: rgb(0, 0, 0);
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 30px;
+        text-align: center;
+    }
+    .educacion .opciones img {
+        width: 150px;
+        height: 250px;
+        margin-left: 20px;
+        transition: transform 0.3s ease !important;
+    }
+    .educacion .btn {
+        background-color: rgb(203, 97, 97);
+        color: #fff;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    /* Adaptamos la colocación de los contenedores y el tamaño para dispositivos móviles.
+    */
+    @media only screen and (max-width: 760px) {
+        .educacion {
+            display: grid;
+        }
+
+        .educacion .opciones {
+            width: 320px;
+            height: 300px;
+        }
+    }
+
+    /**-----------------------------------------------------------------------------------------------------------------------------------
+    * -------------------------------------------------------- TALLERES Y CURSOS ----------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------------------------------*/
+    .textoEducacion {
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 1000px;
+        height: 320px;
+        margin: 10px auto;
+    }
+    .textoEducacion p {
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-size: 17px;
+        margin: 0 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .textoEducacion img {
+        width: 350px;
+        height: 300px;
+    }
+    .servicios {
+        padding: 60px;
+        background-color: #e0e0e0
+    }
+    .servicios .educacion .texto h2{
+        color: white;
+    }
+    .servicios .titulo {
+        margin-left: 75px;
+        position: absolute;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 3px 0 #ff0000a6;
+    }
+    .servicios .titulo:nth-child(2) {margin-left: 520px;}
+    .servicios .titulo:nth-child(3) {margin-left: 1000px;}
+    .servicios .tituloT {
+        margin-left: 125px;
+        position: absolute;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 1px 0 #000000a6;
+    }
+    .servicios .tituloT:nth-child(2) {margin-left: 550px;}
+    .servicios .tituloT:nth-child(3) {margin-left: 1130px;}
+    .cursos,.talleres {
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 60px;
+        gap: 250px;
+    }
+    .opciones .texto a{
+        text-decoration: none;
+    }
+    .opciones .texto a:visited{
+        text-decoration: none;
+        color: white;
+    }
+    .opciones .texto .btn {
+        background-color: #8295c2;
+    }
+    .curso,
+    .taller {
+        position: relative;
+        width: 250px;
+        text-align: center;
+        flex-direction: column;
+
+    }
+
+    .cursos img,
+    .taller img {
+        width: 350px;
+        height: auto;
+        margin: 10px 10px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+        opacity: 1;
+    }
+
+    .curso .button,
+    .taller .button {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .curso a,
+    .taller a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .curso a:visited,
+    .taller a:visited {
+        color: white;
+        text-decoration: none;
+    }
+    .cursos .lightbox,
+    .talleres .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+    .cursos .lightbox img,
+    .talleres .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    .cursos .lightbox:target,
+    .talleres .lightbox:target {
+        display: flex;
+    }
+    .cursos .close,
+    .talleres .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+    }
+    .contactame {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .contactame p {
+        margin-top: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-weight: bolder;
+        color: #000000;
+        font-size: 20px;
+        box-sizing: border-box;
+        background-color: #d6d4d4;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.337);
+        animation: salto 1s ease infinite;
+    }
+    .contactame button {
+        margin-top: 20px;
+        background-color: rgb(242, 255, 0);
+        color: rgba(0, 0, 0, 0.899);
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        font-size: 15px;
+        cursor: pointer;
+        padding: 5px 5px;
+        border-radius: 10px;
+        opacity: 1;
+    }
+    /**
+    * Adaptamos a diferentes dispositivos dimensiones y tamaños.
+    */
+    @media only screen and (max-width: 360px) {
+        .cursos img,
+        .taller img {
+            width: 320px;
+        }
+    }
+
+    @media only screen and (max-width: 1100px) {
+
+        .cursos,
+        .talleres {
+            display: grid;
+            justify-content: center;
+            margin-top: 0px;
+            margin-left: -8px;
+            gap: 5px;
+        }
+        .curso,
+        .taller {
+            position: relative;
+            width: 370px;
+        }
+        .curso .button,
+        .taller .button {
+            left: 40%;
+        }
+        .servicios .titulo,
+        .servicios .tituloT {
+            display: none;
+        }
+        .textoEducacion {
+            width: 300px;
+            height: 250px;
+            margin: 10 0;
+            padding: 2px;
+        }
+        .tituloEducacion {
+            font-size: 24px;
+        }
+        .textoEducacion p {
+            font-size: 6.5px;
+        }
+        .textoEducacion img {
+            width: 250px;
+            height: 200px;
+        }
+    }
+    /*-------------------------------------------------------------------------------------------------------------------------------------
+    *-----------------------------------------------------------------CLOWN--------------------------------------------------------------
+    ------------------------------------------------------------------------------------------------------------------------------------*/
+
+    .clown .servicios {
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .clown .servicios .contenedorParrafos {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-top: -30px;
+    }
+    .clown .servicios .contenedorParrafos .parrafoDesplazadoIzqda {
+        font-size: 20px;
+        font-family: cursive;
+        font-variant: small-caps;
+        animation: aparecer 4s;
+        color: gray;
+    }
+
+    .clown .servicios .contenedorParrafos .parrafoDesplazadoDerecha {
+        font-size: 20px;
+        font-family: cursive;
+        font-variant: small-caps;
+        opacity: 0;
+        margin-left: 6px;
+        transform: translateX(+50px);
+        animation: aparecerDerecha 4s ease forwards;
+        animation-delay: 1s;
+        color: gray;
+    }
+
+    .clown .servicios h2 {
+        font-size: 35px;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+    }
+
+    .clown .servicios .presentacionClown {
+        margin: 20px auto;
+        max-width: 1000px;
+        height: 200px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-color: #ddd9d9;
+        padding: 20px;
+        position: relative;
+        opacity: 1;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.337);
+        overflow: hidden;
+
+    }
+    
+    .clown .servicios .presentacionClown::before /*pseudoelemento para modificar sin tocar el DOM*/ {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../CONTENIDO/clownDB1.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.5;
+        z-index: 0;
+    }
+    .clown .servicios .presentacionClown p {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+        max-width: 1000px;
+        color: #292525;
+        position: relative;
+        z-index: 1;
+    }
+    .clown .servicios .imagenes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(460px, 0fr));
+        grid-template-rows: repeat(auto-fill, minmax(310px, 0fr));
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .clown .servicios .imagenes img,
+    .clown .servicios .espectaculosClown img {
+        width: 450px;
+        height: auto;
+        margin: 10px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .clown .servicios .imagenes img:hover,
+    .clown .servicios .espectaculosClown img:hover {
+        transform: scale(1.05);
+    }
+    #imag5 {
+        margin: 0 auto;}
+    #img5 {
+        width: 200px;}
+
+    /**
+    * Uso de la clase lightbox usada para mostrar imágenes o contenido de forma superpuesta a la página en la que nos encontremos.
+    * Por defecto está oculto y cuando se activa (:target) se muestra con el display flex.
+    */
+    .lightbox {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .lightbox p {
+        color: white;
+        font-variant: small-caps;
+        font-size: 15px;
+        margin-top: 15px;
+        max-width: 80%;
+    }
+
+    .lightbox:target {
+        display: flex;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: rgb(0, 0, 0);
+        font-size: 40px;
+        text-decoration: none;
+    }
+    /*
+    * Adaptación a los diferentes dispositivos el tamaño de textos, imágenes y colocación.
+    */
+    @media only screen and (max-width: 386px) {
+        .clown .servicios .contenedorParrafos .parrafoDesplazadoIzqda {
+            font-size: 5px;
+        }
+
+        .clown .servicios .contenedorParrafos .parrafoDesplazadoDerecha {
+            font-size: 5px;
+        }
+
+        .contenedorParrafos img {
+            display: none;
+        }
+        .clown .servicios h2{
+            font-size: 20px;
+        }
+    }
+    @media only screen and (min-width: 386px) and (max-width: 460px) {
+        .clown .servicios .contenedorParrafos .parrafoDesplazadoIzqda {
+            font-size: 7px;
+        }
+
+        .clown .servicios .contenedorParrafos .parrafoDesplazadoDerecha {
+            font-size: 7px;
+        }
+
+        .contenedorParrafos img {
+            display: none;
+        }
+        .clown .servicios h2{
+            font-size: 20px;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .clown .servicios .imagenes {
+            width: 100%;
+            margin-top: 20px;
+            display: block;
+            justify-content: center;
+        }
+        #imag1,#imag2,#imag3,#imag4,#imag5,#imag6,#imag7,#imag8,#imag9 {
+            width: 250px;
+            height: auto;
+            margin: 0 0;
+        }
+        .clown .servicios .imagenes img {
+            width: 250px;
+            height: auto;
+            margin: 10px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .clown .servicios .contenedorParrafos .parrafoDesplazadoIzqda {
+            font-size: 11px;
+        }
+        .clown .servicios .contenedorParrafos .parrafoDesplazadoDerecha {
+            font-size: 11px;
+        }
+        .clown .servicios .presentacionClown {
+            margin: 20px auto;
+            display: flex;
+            max-width: 300px;
+            align-items: center;
+            background-color: #ddd9d9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.337);
+        }
+        .clown .servicios .presentacionClown p {
+            font-size: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-variant: small-caps;
+            max-width: 200px;
+        }
+        .clown .servicios .presentacionClown img {
+            margin-left: 10px;
+            width: 150px;
+            display: none;
+        }
+    }
+
+    /* ------------------------------------------------------------------------------------------------------------------------------------
+* -----------------------------------------------------ESPECTÁCULOS------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------*/
+.tituloClown {
+    z-index: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.imagenEspectaculos {
+    position: absolute;
+    width: 150px;
+    top: 113px;
+    animation: aparecerYGirar 2s ease-out forwards; 
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    left: 45%;
+}
+
+.espectaculosClown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 145px; 
+    gap: 20px;
+}
+
+.espectaculosClown img {
+    width: 65%; 
+    max-width: 550px; 
+}
+
+.espectaculosClown p {
+    text-align: center;
+    font-size: 1em;
+}
+.espectaculos .servicios .espectaculosClown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.espectaculos .servicios .espectaculosClown a {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    color: wheat;
+    background-color: #ff0000;
+    font-size: 15px;
+    font-variant: small-caps;
+    padding: 5px 5px;
+    border: 2px solid wheat;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.espectaculos .servicios .espectaculosClown a:visited {
+    color: wheat;
+}
+/*
+* Adaptamos a lso diferentes dispositivos.
+*/
+@media only screen and (max-width: 500px) {
+    .espectaculos .servicios .espectaculosClown a {
+        font-size: 10px;
+    }
+    .espectaculosClown img { 
+        width: 85%; 
+        max-width: 600px; 
+    }
+    .tituloClown {
+        margin-top: 20px;
+        font-size: 15.5px;
+    }
+    .imagenEspectaculos {
+        position: absolute;
+        width: 120px;
+        top: 89px;
+        animation: aparecerYGirar 2s ease-out forwards; 
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        left: 38%;
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 769px) {
+    .tituloClown {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .imagenEspectaculos {
+        position: absolute;
+        width: 120px;
+        top: 89px;
+        animation: aparecerYGirar 2s ease-out forwards; 
+        z-index: 0;
+        transform: translate(-50%, -50%);
+        left: 43%;
+    }
+}
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------
+    *-----------------------------------------------------CONTACTO-------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------------------------------------*/
+    #contacto {
+        margin: 0;
+        padding: 50px 0;
+        background-image: url('../CONTENIDO/clownFBlancoSonriendo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+    }
+    /* Creación de formulario con distintos colores y transparencias.
+    */
+    #formulario_contacto {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.458);
+        max-width: 350px;
+        margin: auto;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+    #formulario_contacto input,
+    #formulario_contacto textarea {
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        padding: 10px;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, 0.427);
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    #formulario_contacto textarea {
+        resize: none;
+        height: 120px;
+    }
+    #formulario_contacto button {
+        background-color: #000000;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    /*--------------------------------------------------------------------------------------------------------------------------------------
+    *-----------------------------------------------------PIE DE PÁGINA----------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------------------------------------*/
+    footer {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    footer ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    .redes li {
+        margin-left: 10px;
+        border-top: 10px;
+    }
+    footer #logo {
+        width: 60px;
+        float: left;
+    }
+    /* Añadimos la utilida de la flecha para que nos suba hacia el inicio de la página.
+    */
+    .flecha-arriba {
+        position: initial;
+        right: 10px;
+        float: right;
+        background-color: #000000;
+        color: white;
+        width: 10px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+        padding: 0;
+    }
+    .flecha-arriba:hover {
+        background-color: rgb(255, 230, 0);
+    }
+
+
+    /**-----------------------------------------------------------------------------------------------------------------------------------------
+* -----------------------------------------------------------------ANIMACIONES-------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    @keyframes aparecer {
+        0% {
+            transform: translateX(-500%);
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes aparecerDerecha {
+        0% {
+            transform: translateX(+80%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes desaparecerIzqda {
+        0% {
+            transform: translateX(120%);
+        }
+
+        100% {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        30% {
+            transform: translateX(-100%);
+        }
+
+        60% {
+            transform: translateX(-200%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+    @keyframes aparecerYGirar {
+        0% {
+          top: -200px;
+          transform: rotate(0deg); /* Empieza sin rotar */
+        }
+        100% {
+          transform: rotate(360deg); /* Da una vuelta completa */
+        }
+      }
+      @keyframes salto {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    /*
+    * -------------------------ESTILOS DE LA BARRA DE BÚSQUEDA - FOOTER -----------------------------------
+    */
+      .search-container {
+        max-width: 400px;
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+      }
+      .search-input {
+        margin-left: 50px;
+        width: 300px;
+        font-size: 16px;
+        padding: 5px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .search-button {
+        margin-left: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .search-button:hover {
+        background-color: #0056b3;
+      }
+      .results {
+        max-width: 600px;
+        max-height: 800px;
+        margin: 5px auto;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 2px 2px 2px rgb(4, 76, 243);
+      }
+      .results div {
+        margin-bottom: 10px;
+      }
+      .results a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+        font-variant: small-caps;
+      }
+      .results a:hover {
+        text-decoration: underline;
+      }
+      .results p {
+        margin: 5px 0 0;
+        color: #555;
+      }
+
+      

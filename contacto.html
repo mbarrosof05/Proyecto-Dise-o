@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contacto - Cristina</title>
+   <link rel="stylesheet" href="css/web.css">
+   <script src="javascript/web.js" defer></script>
+   <script src="javascript/busqueda.js" defer></script>
+</head>
+<body>
+   <header id="cabecera">
+      <div class="logo-titulo">
+          <img class="logoIzqda" src="img/iconoPato.png">
+          <div class="titulo">
+              <h1>CRISTINA GRAOS</h1>
+          </div>
+          <img class="logoDerecha" src="img/logoCrisCara.png">
+      </div>
+      <div id="language-selector">
+         <img id="flag-en" class="flag" src="img/reino-unido.png" width="20px" alt="English" title="English">
+         <img id="flag-es" class="flag" src="img/espana.png" width="20px" alt="Español" title="Español">
+     </div>  
+      <nav>
+         <a href="index.html">Inicio</a>
+         <a href="actriz.html">Actriz</a>
+         <a href="clown.html">Clown</a>
+         <a href="espectaculos.html">Espectáculos</a>
+         <a href="educacion.html">Educación</a>
+         <a href="contacto.html">Contacto</a>
+         <div class="animation start-home"></div>
+     </nav>
+  </header>
+  <div class="espacio"></div>
+  <div id="contacto">
+
+      <form id="formulario_contacto">
+         <div>
+            <input type="text" id="nombre" name="nombre" required placeholder="Nombre del/la interesado/a">
+         </div>
+         <div>
+            <input type="email" id="email" name="email" required placeholder="Correo electrónico">
+         </div>
+         <div>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¡No dudes en ponerte en contacto!"></textarea>
+         </div>
+         <div>
+            <button type="submit">Enviar</button>
+         </div>
+      </form>
+
+</div>
+<footer>
+   <a href="#top"><img id="logo" src="img/logo.png"></a>
+   <div class="pie">
+       <p>&copy; Cristina Graos. Todos los derechos reservados.</p>
+       <ul class="redes">
+           <li><a href="https://wa.me/651685734"><img src="img/logo-wp.webp" width="20px"></a></li>
+           <li><a href="https://www.instagram.com/cristi_graos/"><img src="img/logoinst.png" width="20px"></a></li>
+       </ul>
+       <div class="search-container">
+           <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+           <button id="searchButton" class="search-button"><img src="img/lupa.png" width="20px"></button>
+       </div>
+       <div id="results" class="results"></div>
+   </div>
+   <a href="#top" class="flecha-arriba">↑</a>
+</footer>
+   <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <script>
+   (function(){
+      emailjs.init("yLwjmsrntPMn-N4N6"); // Coloca aquí tu User ID
+   })();
+   let formulario = document.getElementById('formulario_contacto');
+   formulario.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el comportamiento por defecto del formulario
+
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      
+      // Usa emailjs para enviar el correo
+      emailjs.send("service_qan67jb", "template_h4bmu5l", {
+         nombre: nombre,
+         email: email,
+         mensaje: mensaje
+      })
+      .then(function(response) {
+         console.log('Correo enviado con éxito', response.status, response.text);
+         alert('Tu mensaje ha sido enviado.');
+      }, function(error) {
+         console.error('Error al enviar el correo:', error);
+         alert('Hubo un error al enviar el mensaje. Intenta de nuevo.');
+      });
+   });
+</script>
+</body>
+<script>
+   //Declaramos el contenido en español y luego completamos la traducción al inglés.
+const content = {
+    es: {
+        titulo: "CRISTINA GRAOS",
+        navInicio: "Inicio",
+        navActriz: "Actriz",
+        navClown: "Clown",
+        navEspectaculos: "Espectáculos",
+        navEducacion: "Educación",
+        navContacto: "Contacto",
+        formularioNombre: "Nombre del/la interesado/a",
+        formularioEmail: "Correo electrónico",
+        formularioMensaje: "¡No dudes en ponerte en contacto!",
+        formularioEnviar: "Enviar",
+        footer: "© Cristina Graos. Todos los derechos reservados."
+    },
+    en: {
+        titulo: "CRISTINA GRAOS",
+        navInicio: "Home",
+        navActriz: "Actress",
+        navClown: "Clown",
+        navEspectaculos: "Shows",
+        navEducacion: "Education",
+        navContacto: "Contact",
+        formularioNombre: "Name of the person interested",
+        formularioEmail: "Email",
+        formularioMensaje: "Don't hesitate to contact us!",
+        formularioEnviar: "Send",
+        footer: "© Cristina Graos. All rights reserved."
+    }
+};
+
+function changeLanguage(lang) {
+    document.querySelector(".titulo h1").textContent = content[lang].titulo;
+   const navLinks = document.querySelectorAll("nav a");
+    navLinks[0].textContent = content[lang].navInicio;
+    navLinks[1].textContent = content[lang].navActriz;
+    navLinks[2].textContent = content[lang].navClown;
+    navLinks[3].textContent = content[lang].navEspectaculos;
+    navLinks[4].textContent = content[lang].navEducacion;
+    navLinks[5].textContent = content[lang].navContacto;
+    document.getElementById("nombre").placeholder = content[lang].formularioNombre;
+    document.getElementById("email").placeholder = content[lang].formularioEmail;
+    document.getElementById("mensaje").placeholder = content[lang].formularioMensaje;
+    document.querySelector("#formulario_contacto button").textContent = content[lang].formularioEnviar;
+    document.querySelector(".pie p").textContent = content[lang].footer;
+
+    const flagEs = document.getElementById("flag-es");
+    const flagEn = document.getElementById("flag-en");
+    if (lang === 'es') {
+        flagEs.style.opacity = 1;
+        flagEn.style.opacity = 0.5;
+    } else {
+        flagEn.style.opacity = 1;
+        flagEs.style.opacity = 0.5;
+    }
+}
+// Eventos
+document.getElementById("flag-en").addEventListener("click", function() {
+    changeLanguage('en');
+});
+document.getElementById("flag-es").addEventListener("click", function() {
+    changeLanguage('es');
+});
+
+</script>
+</html>

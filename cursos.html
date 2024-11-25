@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Cristina</title>
+    <link rel="stylesheet" href="css/web.css">
+    <script src="javascript/web.js" defer></script>
+    <script src="javascript/busqueda.js" defer></script>
+</head>
+
+<body>
+    <header id="cabecera">
+        <div class="logo-titulo">
+            <img class="logoIzqda" src="img/iconoPato.png">
+            <div class="titulo">
+                <h1>CRISTINA GRAOS</h1>
+            </div>
+            <img class="logoDerecha" src="img/logoCrisCara.png">
+        </div>
+        <div id="language-selector">
+            <img id="flag-en" class="flag" src="img/reino-unido.png" width="20px" alt="English" title="English">
+            <img id="flag-es" class="flag" src="img/espana.png" width="20px" alt="Español" title="Español">
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="actriz.html">Actriz</a>
+            <a href="clown.html">Clown</a>
+            <a href="espectaculos.html">Espectáculos</a>
+            <a href="educacion.html">Educación</a>
+            <a href="contacto.html">Contacto</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </header>
+    <div class="espacio"></div>
+    <section id="contenido" class="servicios">
+        <p class="titulo" id="tituloCurso1">- CURSO DE MÁSCARA NEUTRA -</p>
+        <p class="titulo" id="tituloCurso2">- CURSO DE INICIO AL MUNDO DEL CLOWN -</p>
+        <p class="titulo" id="tituloCurso3">- CURSO DE INICIO AL MUNDO DEL MIMO -</p>
+        <div class="cursos">
+            <div class="curso">
+                <img src="img/cursoMáscaraNeutra.png" id="curso1">
+                <a href="#cur1"><button class="button" id="verMasT1">Ver Más</button></a>
+                <div id="cur1" class="lightbox">
+                    <a href="#curso1" class="close">&times;</a>
+                    <img src="img/cartelCursoMascaraAtras.png">
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/cartelCursoClown.jpeg" id="curso2">
+                <a href="#cur2"><button class="button" id="verMasT2">Ver Más</button></a>
+                <div id="cur2" class="lightbox">
+                    <a href="#curso2" class="close">&times;</a>
+                    <img src="img/cartelCursoClownAtras.jpeg">
+                </div>
+            </div>
+            <div class="curso">
+                <img src="img/cartelCursoMimo.png" id="curso3">
+                <a href="#cur3"><button class="button" id="verMasT3">Ver Más</button></a>
+                <div id="cur3" class="lightbox">
+                    <a href="#curso3" class="close">&times;</a>
+                    <img src="img/cartelCursoMimoAtras.png">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="contactame">
+            <p id="descripcionCursos">Transforma tu pasión en éxito: inscríbete en nuestros cursos y talleres prácticos
+                para desarrollar habilidades que te llevarán al siguiente nivel.</p>
+            <a href="contacto.html"><button id="btnContacto">CONTACTO</button></a>
+        </div>
+    </section>
+    <footer>
+        <a href="#top"><img id="logo" src="img/logo.png"></a>
+        <div class="pie">
+            <p>&copy; Cristina Graos. Todos los derechos reservados.</p>
+            <ul class="redes">
+                <li><a href="https://wa.me/651685734"><img src="img/logo-wp.webp" width="20px"></a></li>
+                <li><a href="https://www.instagram.com/cristi_graos/"><img src="img/logoinst.png" width="20px"></a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+                <button id="searchButton" class="search-button"><img src="img/lupa.png" width="20px"></button>
+            </div>
+            <div id="results" class="results"></div>
+        </div>
+        <a href="#top" class="flecha-arriba">↑</a>
+    </footer>
+</body>
+<script>
+    //Declaramos el contenido en español y luego completamos la traducción al inglés.
+    const content = {
+        es: {
+            navInicio: "Inicio",
+            navActriz: "Actriz",
+            navClown: "Clown",
+            navEspectaculos: "Espectáculos",
+            navEducacion: "Educación",
+            navContacto: "Contacto",
+            footer: "© Cristina Graos. Todos los derechos reservados.",
+            tituloPagina: "CURSOS",
+            verMasT1: "Ver Más",
+            verMasT2: "Ver Más",
+            verMasT3: "Ver Más",
+            curso1: "CURSO DE MÁSCARA NEUTRA",
+            curso2: "CURSO DE INICIO AL MUNDO DEL CLOWN",
+            curso3: "CURSO DE INICIO AL MUNDO DEL MIMO",
+            descripcion: "Transforma tu pasión en éxito: inscríbete en nuestros cursos y talleres prácticos para desarrollar habilidades que te llevarán al siguiente nivel.",
+            botonContacto: "CONTACTO"
+        },
+        en: {
+            navInicio: "Home",
+            navActriz: "Actress",
+            navClown: "Clown",
+            navEspectaculos: "Shows",
+            navEducacion: "Education",
+            navContacto: "Contact",
+            footer: "© Cristina Graos. All rights reserved.",
+            tituloPagina: "COURSES",
+            verMasT1: "See More",
+            verMasT2: "See More",
+            verMasT3: "See More",
+            curso1: "NEUTRAL MASK COURSE",
+            curso2: "THE WORLD OF CLOWN COURSE",
+            curso3: "THE WORLD OF MIME COURSE",
+            descripcion: "Transform your passion into success: sign up for our courses and practical workshops to develop skills that will take you to the next level.",
+            botonContacto: "CONTACT"
+        }
+    };
+    function changeLanguage(lang) {
+        document.querySelector("#tituloCurso1").textContent = content[lang].curso1;
+        document.querySelector("#tituloCurso2").textContent = content[lang].curso2;
+        document.querySelector("#tituloCurso3").textContent = content[lang].curso3;
+        document.querySelector("#verMasT1").textContent = content[lang].verMasT1;
+        document.querySelector("#verMasT2").textContent = content[lang].verMasT2;
+        document.querySelector("#verMasT3").textContent = content[lang].verMasT3;
+        document.querySelector("#descripcionCursos").textContent = content[lang].descripcion;
+        document.querySelector("#btnContacto").textContent = content[lang].botonContacto;
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks[0].textContent = content[lang].navInicio;
+        navLinks[1].textContent = content[lang].navActriz;
+        navLinks[2].textContent = content[lang].navClown;
+        navLinks[3].textContent = content[lang].navEspectaculos;
+        navLinks[4].textContent = content[lang].navEducacion;
+        navLinks[5].textContent = content[lang].navContacto;
+        document.querySelector(".pie p").textContent = content[lang].footer;
+
+        const flagEs = document.getElementById("flag-es");
+        const flagEn = document.getElementById("flag-en");
+        if (lang === 'es') {
+            flagEs.style.opacity = 1;
+            flagEn.style.opacity = 0.5;
+        } else {
+            flagEn.style.opacity = 1;
+            flagEs.style.opacity = 0.5;
+        }
+    }
+
+    // Eventos asignados a las banderas.
+    document.getElementById("flag-en").addEventListener("click", function () {
+        changeLanguage('en');
+    });
+    document.getElementById("flag-es").addEventListener("click", function () {
+        changeLanguage('es');
+    });
+</script>
+
+</html>

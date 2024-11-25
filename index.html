@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristina Graos</title>
+    <link rel="stylesheet" href="css/web.css">
+    <script src="javascript/web.js" defer></script>
+    <script src="javascript/busqueda.js" defer></script>
+</head>
+
+<body class="index">
+    <header>
+        <div id="language-selector" class="banderasInicio">
+            <img id="flag-en" class="flagInicio" src="img/reino-unido.png" width="20px" alt="English"
+                title="English">
+            <img id="flag-es" class="flagInicio" src="img/espana.png" width="20px" alt="Español" title="Español">
+        </div>
+        <div class="menuInicio">
+            <nav class="menuInicioNav">
+                <a href="index.html" id="linkInicio">Inicio</a>
+                <a href="actriz.html" id="linkActriz">Actriz</a>
+                <a href="clown.html" id="linkClown">Clown</a>
+                <a href="espectaculos.html" id="linkEspectaculos">Espectáculos</a>
+                <a href="educacion.html" id="linkEducacion">Educación</a>
+                <a href="contacto.html" id="linkContacto">Contacto</a>
+                <div class="animation start-home"></div>
+            </nav>
+        </div>
+    </header>
+    <section id="contenido" class="servicios">
+        <div class="indexTitulo">
+            <h1 id="titulo">Cristina Graos</h1>
+        </div>
+        <div class="textoInicial">
+            <p id="descripcion">Cristina Graos nace un verano en Granada donde, desde muy pequeña, se ha interesado por
+                el teatro, por lo que realizó los estudios de arte dramático en la ESAD de Extremadura y,
+                posteriormente, complementa sus estudios con el Máster de Formación del Profesorado. Su expresividad y
+                creatividad la llevan a indagar por el mundo del Clown y del Mimo donde desarrolla su especialidad
+                llegando a crear sus propios espectáculos donde la risa es la protagonista de todas sus historias.</p>
+        </div>
+        <div class="carrousel">
+            <div class="slides">
+                <div class="slides" id="slide1">
+                    <div><img src="CONTENIDO/fGrisChaqueta.jpg"></div>
+                    <div><img src="CONTENIDO/clownFBlanco.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisCamisetaBlanca.jpg"></div>
+                    <div><img src="CONTENIDO/clownFBlancoArriba.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisCamisetaNegra.jpg"></div>
+                    <div><img src="CONTENIDO/clownDB3.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisCamisetaBlanca1.jpg"></div>
+                    <div><img src="CONTENIDO/clownFBlanco.jpg"></div>
+                    <div><img src="CONTENIDO/nocheBrujas1.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisSudadera.jpg"></div>
+                    <div><img src="CONTENIDO/clownDB2.jpg"></div>
+                    <div><img src="CONTENIDO/aquaviveres.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisCamisetaRosa.jpg"></div>
+                    <div><img src="CONTENIDO/clownDB4.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisCamisetaBlanca1.jpg"></div>
+                    <div><img src="CONTENIDO/nocheBrujas1.jpg"></div>
+                    <div><img src="CONTENIDO/ukelele.jpg"></div>
+                    <div><img src="CONTENIDO/laCasaDelDragon.jpg"></div>
+                    <div><img src="CONTENIDO/clownDB2.jpg"></div>
+                    <div><img src="CONTENIDO/fGrisChaqueta.jpg"></div>
+                    <div><img src="CONTENIDO/peloLargo.jpg"></div>
+                    <div><img src="CONTENIDO/nocheBrujas2.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="indexLogos">
+            <img class="logoIzqdaIndex" src="img/iconoPato.png" width="100px">
+            <img class="logoDerechaIndex" src="img/logoCrisCara.png" width="55px">
+        </div>
+    </section>
+    <footer>
+        <a href="#top"><img id="logo" src="img/logo.png"></a>
+        <div class="pie">
+            <p>&copy; Cristina Graos. Todos los derechos reservados.</p>
+            <ul class="redes">
+                <li><a href="https://wa.me/651685734"><img src="img/logo-wp.webp" width="20px"></a></li>
+                <li><a href="https://www.instagram.com/cristi_graos/"><img src="img/logoinst.png" width="20px"></a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+                <button id="searchButton" class="search-button"><img src="img/lupa.png" width="20px"></button>
+            </div>
+            <div id="results" class="results"></div>
+        </div>
+        <a href="#top" class="flecha-arriba">↑</a>
+    </footer>
+
+    <script>
+        //Declaramos el contenido en español y luego completamos la traducción al inglés.
+        const content = {
+            es: {
+                titulo: "Cristina Graos",
+                descripcion: "Cristina Graos nace un verano en Granada donde, desde muy pequeña, se ha interesado por el teatro, por lo que realizó los estudios de arte dramático en la ESAD de Extremadura y, posteriormente, complementa sus estudios con el Máster de Formación del Profesorado. Su expresividad y creatividad la llevan a indagar por el mundo del Clown y del Mimo donde desarrolla su especialidad llegando a crear sus propios espectáculos donde la risa es la protagonista de todas sus historias.",
+                linkInicio: "Inicio",
+                linkActriz: "Actriz",
+                linkClown: "Clown",
+                linkEspectaculos: "Espectáculos",
+                linkEducacion: "Educación",
+                linkContacto: "Contacto",
+                footer: "© Cristina Graos. Todos los derechos reservados."
+            },
+            en: {
+                titulo: "Cristina Graos",
+                descripcion: "Cristina Graos was born one summer in Granada, where from a very young age, she became interested in theatre, which led her to study dramatic arts at the ESAD of Extremadura. She later complemented her studies with a Master's in Teacher Training. Her expressiveness and creativity led her to explore the world of Clown and Mime, where she developed her specialty and created her own shows where laughter is the protagonist of all her stories.",
+                linkInicio: "Home",
+                linkActriz: "Actress",
+                linkClown: "Clown",
+                linkEspectaculos: "Shows",
+                linkEducacion: "Education",
+                linkContacto: "Contact",
+                footer: "© Cristina Graos. All rights reserved."
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelector("#titulo").textContent = content[lang].titulo;
+            document.querySelector("#descripcion").textContent = content[lang].descripcion;
+            document.querySelector("#linkInicio").textContent = content[lang].linkInicio;
+            document.querySelector("#linkActriz").textContent = content[lang].linkActriz;
+            document.querySelector("#linkClown").textContent = content[lang].linkClown;
+            document.querySelector("#linkEspectaculos").textContent = content[lang].linkEspectaculos;
+            document.querySelector("#linkEducacion").textContent = content[lang].linkEducacion;
+            document.querySelector("#linkContacto").textContent = content[lang].linkContacto;
+            document.querySelector(".pie p").textContent = content[lang].footer;
+            const flagEs = document.getElementById("flag-es");
+            const flagEn = document.getElementById("flag-en");
+            if (lang === 'es') {
+                flagEs.style.opacity = 1;
+                flagEn.style.opacity = 0.5;
+            } else {
+                flagEn.style.opacity = 1;
+                flagEs.style.opacity = 0.5;
+            }
+        }
+        // Evento para cambiar el idioma cuando se hace clic en una bandera
+        document.getElementById("flag-en").addEventListener("click", function () {
+            changeLanguage('en');
+        });
+        document.getElementById("flag-es").addEventListener("click", function () {
+            changeLanguage('es');
+        });
+    </script>
+</body>
+
+</html>

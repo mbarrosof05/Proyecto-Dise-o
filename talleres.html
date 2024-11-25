@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres - Cristina</title>
+    <link rel="stylesheet" href="css/web.css">
+    <script src="javascript/web.js" defer></script>
+    <script src="javascript/busqueda.js" defer></script>
+</head>
+
+<body>
+    <header id="cabecera">
+        <div class="logo-titulo">
+            <img class="logoIzqda" src="img/iconoPato.png">
+            <div class="titulo">
+                <h1 id="titulo">CRISTINA GRAOS</h1>
+            </div>
+            <img class="logoDerecha" src="img/logoCrisCara.png">
+        </div>
+        <div id="language-selector">
+            <img id="flag-en" class="flag" src="img/reino-unido.png" width="20px" alt="English" title="English">
+            <img id="flag-es" class="flag" src="img/espana.png" width="20px" alt="Español" title="Español">
+        </div>
+        <nav>
+            <a href="index.html" id="linkInicio">Inicio</a>
+            <a href="actriz.html" id="linkActriz">Actriz</a>
+            <a href="clown.html" id="linkClown">Clown</a>
+            <a href="espectaculos.html" id="linkEspectaculos">Espectáculos</a>
+            <a href="educacion.html" id="linkEducacion">Educación</a>
+            <a href="contacto.html" id="linkContacto">Contacto</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </header>
+    <div class="espacio"></div>
+    <section id="contenido" class="servicios">
+        <p class="tituloT" id="tituloT1">- TALLER DE CLOWN -</p>
+        <p class="tituloT" id="tituloT2">- TALLER DE EXPRESIÓN CORPORAL -</p>
+        <p class="tituloT" id="tituloT3">- TALLER DE TEATRO -</p>
+        <div class="talleres">
+            <div class="taller">
+                <img src="img/cartelTallerClown.png" id="taller3">
+                <a href="#tall3"><button class="button" id="verMasT1">Ver Más</button></a>
+                <div id="tall3" class="lightbox">
+                    <a href="#taller3" class="close">&times;</a>
+                    <img src="img/cartelTallerClownAtras.png">
+                </div>
+            </div>
+            <div class="taller">
+                <img src="img/cartelTallerExpCorporal.png" id="taller2">
+                <a href="#tall2"><button class="button" id="verMasT2">Ver Más</button></a>
+                <div id="tall2" class="lightbox">
+                    <a href="#taller2" class="close">&times;</a>
+                    <img src="img/cartelExpCorporalAtras.png">
+                </div>
+            </div>
+            <div class="taller">
+                <img src="img/tallerTeatro.png" id="taller1">
+                <a href="#tall1"><button class="button" id="verMasT3">Ver Más</button></a>
+                <div id="tall1" class="lightbox">
+                    <a href="#taller1" class="close">&times;</a>
+                    <img src="img/cartelTallerTeatroAtras.png">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="contactame">
+            <p id="transformaTexto">Transforma tu pasión en éxito: inscríbete en nuestros cursos y talleres prácticos
+                para desarrollar habilidades que te llevarán al siguiente nivel.</p>
+            <a href="contacto.html"><button id="contactoButton">CONTACTO</button></a>
+        </div>
+    </section>
+    <footer>
+        <a href="#top"><img id="logo" src="img/logo.png"></a>
+        <div class="pie">
+            <p>&copy; Cristina Graos. Todos los derechos reservados.</p>
+            <ul class="redes">
+                <li><a href="https://wa.me/651685734"><img src="img/logo-wp.webp" width="20px"></a></li>
+                <li><a href="https://www.instagram.com/cristi_graos/"><img src="img/logoinst.png" width="20px"></a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Buscar...">
+                <button id="searchButton" class="search-button"><img src="img/lupa.png" width="20px"></button>
+            </div>
+            <div id="results" class="results"></div>
+        </div>
+        <a href="#top" class="flecha-arriba">↑</a>
+    </footer>
+    <script>
+        ////Declaramos el contenido en español y luego completamos la traducción al inglés.
+        const content = {
+            es: {
+                titulo: "CRISTINA GRAOS",
+                tituloT1: "- TALLER DE CLOWN -",
+                tituloT2: "- TALLER DE EXPRESIÓN CORPORAL -",
+                tituloT3: "- TALLER DE TEATRO -",
+                verMasT1: "Ver Más",
+                verMasT2: "Ver Más",
+                verMasT3: "Ver Más",
+                transformaTexto: "Transforma tu pasión en éxito: inscríbete en nuestros cursos y talleres prácticos para desarrollar habilidades que te llevarán al siguiente nivel.",
+                contactoButton: "CONTACTO",
+                linkInicio: "Inicio",
+                linkActriz: "Actriz",
+                linkClown: "Clown",
+                linkEspectaculos: "Espectáculos",
+                linkEducacion: "Educación",
+                linkContacto: "Contacto",
+                footer: "© Cristina Graos. Todos los derechos reservados."
+            },
+            en: {
+                titulo: "CRISTINA GRAOS",
+                tituloT1: "- CLOWN WORKSHOP -",
+                tituloT2: "- BODY EXPRESSION WORKSHOP -",
+                tituloT3: "- THEATRE WORKSHOP -",
+                verMasT1: "See More",
+                verMasT2: "See More",
+                verMasT3: "See More",
+                transformaTexto: "Transform your passion into success: sign up for our practical courses and workshops to develop skills that will take you to the next level.",
+                contactoButton: "CONTACT",
+                linkInicio: "Home",
+                linkActriz: "Actress",
+                linkClown: "Clown",
+                linkEspectaculos: "Shows",
+                linkEducacion: "Education",
+                linkContacto: "Contact",
+                footer: "© Cristina Graos. All rights reserved."
+            }
+        };
+        function changeLanguage(lang) {
+            document.querySelector("#titulo").textContent = content[lang].titulo;
+            document.querySelector("#tituloT1").textContent = content[lang].tituloT1;
+            document.querySelector("#tituloT2").textContent = content[lang].tituloT2;
+            document.querySelector("#tituloT3").textContent = content[lang].tituloT3;
+            document.querySelector("#verMasT1").textContent = content[lang].verMasT1;
+            document.querySelector("#verMasT2").textContent = content[lang].verMasT2;
+            document.querySelector("#verMasT3").textContent = content[lang].verMasT3;
+            document.querySelector("#transformaTexto").textContent = content[lang].transformaTexto;
+            document.querySelector("#contactoButton").textContent = content[lang].contactoButton;
+            document.querySelector("#linkInicio").textContent = content[lang].linkInicio;
+            document.querySelector("#linkActriz").textContent = content[lang].linkActriz;
+            document.querySelector("#linkClown").textContent = content[lang].linkClown;
+            document.querySelector("#linkEspectaculos").textContent = content[lang].linkEspectaculos;
+            document.querySelector("#linkEducacion").textContent = content[lang].linkEducacion;
+            document.querySelector("#linkContacto").textContent = content[lang].linkContacto;
+            document.querySelector(".pie p").textContent = content[lang].footer;
+            const flagEs = document.getElementById("flag-es");
+            const flagEn = document.getElementById("flag-en");
+            if (lang === 'es') {
+                flagEs.style.opacity = 1;
+                flagEn.style.opacity = 0.5;
+            } else {
+                flagEn.style.opacity = 1;
+                flagEs.style.opacity = 0.5;
+            }
+        }
+        document.getElementById("flag-es").addEventListener("click", function () {
+            changeLanguage("es");
+        });
+
+        document.getElementById("flag-en").addEventListener("click", function () {
+            changeLanguage("en");
+        });
+
+        // Cargar idioma por defecto (español)
+        changeLanguage("es");
+    </script>
+</body>
+
+</html>
